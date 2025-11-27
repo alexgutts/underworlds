@@ -17,6 +17,7 @@
  */
 
 import React from 'react';
+import { getImageUrl, IMAGE_FILES } from '../config/images';
 
 const About: React.FC = () => {
   return (
@@ -46,7 +47,7 @@ const About: React.FC = () => {
           
           {/* Featured underwater image */}
           <img 
-            src="/attachments/saasilmonica3.JPG" 
+            src={getImageUrl(IMAGE_FILES.SAASILMONICA3)} 
             alt="Freedivers ascending toward light" 
             className="w-full h-[500px] object-cover mt-12 shadow-2xl"
           />
@@ -61,7 +62,7 @@ const About: React.FC = () => {
         {/* Image on left */}
         <div className="order-2 lg:order-1 relative h-[500px] lg:h-auto overflow-hidden group">
            <img 
-             src="/attachments/DSC09894 2.jpeg" 
+             src={getImageUrl(IMAGE_FILES.DSC09894)} 
              alt="Lone diver in the abyss with bioluminescent plankton" 
              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
            />
@@ -95,7 +96,7 @@ const About: React.FC = () => {
         {/* Image on right */}
         <div className="relative h-[500px] lg:h-auto overflow-hidden group">
            <img 
-             src="/attachments/IMG_1823 2.JPG" 
+             src={getImageUrl(IMAGE_FILES.IMG_1823)} 
              alt="Cathedral-like light rays in underwater cave" 
              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
            />

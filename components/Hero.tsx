@@ -19,6 +19,7 @@
  */
 
 import React from 'react';
+import { getImageUrl, IMAGE_FILES } from '../config/images';
 
 const Hero: React.FC = () => {
   // Handle smooth scrolling to different sections of the page
@@ -53,7 +54,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 w-full h-full">
         {/* Main hero image: Freediver silhouetted against light rays - positioned 3% left for better centering */}
         <img 
-            src="/attachments/DSC00670.JPG" 
+            src={getImageUrl(IMAGE_FILES.DSC00670)} 
             alt="Freediver descending into deep blue water with dramatic light rays" 
             className="w-full h-full object-cover animate-[subtleZoom_20s_ease-in-out_infinite_alternate]"
             style={{ objectPosition: '47% center' }}

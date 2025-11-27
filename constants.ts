@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Product, JournalArticle } from './types';
+import { getImageUrl, IMAGE_FILES } from './config/images';
 
 // Alejandro's underwater photography portfolio
 // Each photograph tells a story from beneath the surface
@@ -17,9 +18,9 @@ export const PRODUCTS: Product[] = [
     longDescription: 'Captured at 30 meters depth in a cenote in Tulum, Mexico, this image represents the meditative state achieved in freediving. The interplay of light and shadow creates a spiritual atmosphere, where the diver becomes one with the ocean. The dramatic light rays symbolize hope and transcendence in the depths.',
     price: 0, // Portfolio piece - not for sale
     category: 'Limited Edition',
-    imageUrl: '/attachments/DSC00670.JPG',
+    imageUrl: getImageUrl(IMAGE_FILES.DSC00670),
     gallery: [
-      '/attachments/DSC00670.JPG'
+      getImageUrl(IMAGE_FILES.DSC00670)
     ],
     features: ['Tulum, Mexico', '30 meters depth', 'Natural light only', 'Single breath']
   },
@@ -31,9 +32,9 @@ export const PRODUCTS: Product[] = [
     longDescription: 'This abstract composition explores the boundary between air and water. Shot looking upward toward the surface in the Caribbean Sea, the refraction of sunlight creates ever-changing geometric patterns. The image invites contemplation on the liminal spaces between worlds—the tangible and the ethereal.',
     price: 0, // Portfolio piece
     category: 'Fine Art',
-    imageUrl: '/attachments/DSC01709.JPEG',
+    imageUrl: getImageUrl(IMAGE_FILES.DSC01709),
     gallery: [
-      '/attachments/DSC01709.JPEG'
+      getImageUrl(IMAGE_FILES.DSC01709)
     ],
     features: ['Caribbean Sea', '15 meters depth', 'Looking toward surface', 'Abstract light study']
   },
@@ -45,9 +46,9 @@ export const PRODUCTS: Product[] = [
     longDescription: 'Taken during a night dive in the Pacific, this haunting image captures the overwhelming scale of the ocean. The diver appears tiny against the infinite expanse, while glowing plankton creates an otherworldly atmosphere below. This photograph speaks to our innate human curiosity to explore the unknown.',
     price: 0, // Portfolio piece
     category: 'Limited Edition',
-    imageUrl: '/attachments/DSC09894 2.jpeg',
+    imageUrl: getImageUrl(IMAGE_FILES.DSC09894),
     gallery: [
-      '/attachments/DSC09894 2.jpeg'
+      getImageUrl(IMAGE_FILES.DSC09894)
     ],
     features: ['Pacific Ocean', 'Night dive', 'Bioluminescent plankton', '35 meters depth']
   },
@@ -59,9 +60,9 @@ export const PRODUCTS: Product[] = [
     longDescription: 'Photographed in the Bahamas, this image captures a rare moment of trust between human and shark. The diver\'s graceful posture and the shark\'s calm demeanor demonstrate the possibility of peaceful coexistence. The brilliant turquoise water provides a dreamlike backdrop to this intimate encounter.',
     price: 0, // Portfolio piece
     category: 'Wildlife',
-    imageUrl: '/attachments/DSC0E5024.JPG',
+    imageUrl: getImageUrl(IMAGE_FILES.DSC0E5024),
     gallery: [
-      '/attachments/DSC0E5024.JPG'
+      getImageUrl(IMAGE_FILES.DSC0E5024)
     ],
     features: ['Bahamas', 'Nurse shark encounter', '20 meters depth', 'Wildlife interaction']
   },
@@ -73,9 +74,9 @@ export const PRODUCTS: Product[] = [
     longDescription: 'Captured in a limestone cave system, this photograph showcases the raw power and beauty of natural light underwater. The sun beams create a spiritual atmosphere, reminiscent of light filtering through stained glass in an ancient cathedral. The diver explores with reverence, small against the geological majesty.',
     price: 0, // Portfolio piece
     category: 'Limited Edition',
-    imageUrl: '/attachments/IMG_1823 2.JPG',
+    imageUrl: getImageUrl(IMAGE_FILES.IMG_1823),
     gallery: [
-      '/attachments/IMG_1823 2.JPG'
+      getImageUrl(IMAGE_FILES.IMG_1823)
     ],
     features: ['Limestone cave system', 'God rays', '25 meters depth', 'Cave diving']
   },
@@ -87,9 +88,9 @@ export const PRODUCTS: Product[] = [
     longDescription: 'This powerful image captures the final moments of a deep dive. The three divers move as one toward the light above, their forms creating a rhythmic vertical composition. Shot at 40 meters in the Mediterranean, the image speaks to themes of teamwork, trust, and the universal human desire to reach for the light.',
     price: 0, // Portfolio piece
     category: 'Limited Edition',
-    imageUrl: '/attachments/saasilmonica3.JPG',
+    imageUrl: getImageUrl(IMAGE_FILES.SAASILMONICA3),
     gallery: [
-      '/attachments/saasilmonica3.JPG'
+      getImageUrl(IMAGE_FILES.SAASILMONICA3)
     ],
     features: ['Cenote in Yucatan, México']
   }
@@ -103,7 +104,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
         title: "One Breath, One World",
         date: "November 15, 2025",
         excerpt: "The meditative practice of freediving and how it transformed my relationship with the ocean.",
-        image: "/attachments/DSC00670.JPG",
+        image: getImageUrl(IMAGE_FILES.DSC00670),
         content: React.createElement(React.Fragment, null,
             React.createElement("p", { className: "mb-6 first-letter:text-5xl first-letter:font-serif first-letter:mr-3 first-letter:float-left text-[#5D5A53]" },
                 "The first time I held my breath and descended past 20 meters, something fundamental shifted. The ocean stopped being a place I visited and became a place where I belonged."
@@ -124,7 +125,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
         title: "Light and Depth",
         date: "October 22, 2025",
         excerpt: "Technical notes on capturing the interplay of natural light in underwater environments.",
-        image: "/attachments/IMG_1823 2.JPG",
+        image: getImageUrl(IMAGE_FILES.IMG_1823),
         content: React.createElement(React.Fragment, null,
             React.createElement("p", { className: "mb-6 text-[#5D5A53]" },
                 "Underwater photography is a constant negotiation with light. Every meter of descent filters out another wavelength. Red disappears first, then orange, then yellow. By 30 meters, the world is a study in blues and greens."
@@ -149,7 +150,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
         title: "Encounters",
         date: "September 8, 2025",
         excerpt: "Swimming with sharks, rays, and cetaceans—moments of connection across species.",
-        image: "/attachments/DSC0E5024.JPG",
+        image: getImageUrl(IMAGE_FILES.DSC0E5024),
         content: React.createElement(React.Fragment, null,
             React.createElement("p", { className: "mb-6 text-[#5D5A53]" },
                 "The nurse shark approached slowly, curious. I held still, matching its calm energy. When it passed close enough to touch, I extended my hand—not to grab or control, but to acknowledge. A gentle contact, a moment of interspecies understanding."

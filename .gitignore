@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Large images should be hosted externally (Cloudflare R2, S3, etc.)
+# Images in public/attachments/ are kept for local development only
+# In production, set VITE_IMAGE_CDN_URL to use external hosting
+# See IMAGE_SETUP.md for instructions
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
