@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Underworlds - Underwater Photography by Alejandro Gutierrez</title>
+    <meta name="description" content="Underwater photography from the deep. Fine art prints by freediver and photographer Alejandro Gutierrez. Explore the ocean through natural light." />
+    <meta name="keywords" content="underwater photography, freediving photography, ocean art, marine photography, fine art prints, Alejandro Gutierrez" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Import elegant serif and sans-serif fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+      
+      /* Global scroll behavior with offset for fixed navbar */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 85px;
+      }
+
+      /* Base body styles with ocean-inspired color palette */
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f0f9ff; /* Light sky blue background */
+        color: #0c4a6e; /* Deep ocean blue text */
+      }
+      
+      /* Apply serif font to headings for elegant photography portfolio feel */
+      h1, h2, h3, h4, .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+
+      /* Hide scrollbars for cleaner aesthetic */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Fade-in-up animation for hero elements */
+      @keyframes fade-in-up {
+        0% { opacity: 0; transform: translateY(30px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      .animate-fade-in-up {
+        animation: fade-in-up 1s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+      }
+      
+      /* Subtle zoom animation for hero background image */
+      @keyframes subtleZoom {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.05); }
+      }
+      
+      /* Slide-up animation for chat widget */
+      @keyframes slide-up-fade {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      
+      .animate-slide-up-fade {
+        animation: slide-up-fade 0.3s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+      }
+      
+      /* Animation delays for staggered effects */
+      .animate-delay-200 { animation-delay: 0.2s; }
+      .animate-delay-400 { animation-delay: 0.4s; }
+      .delay-75 { animation-delay: 75ms; }
+      .delay-150 { animation-delay: 150ms; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
