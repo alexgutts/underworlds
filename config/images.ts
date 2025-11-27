@@ -23,8 +23,9 @@ export const getImageUrl = (imagePath: string): string => {
   // If CDN base URL is configured, use external hosting
   if (IMAGE_CDN_BASE_URL) {
     // Remove leading slash if present and construct full URL
+    // Images are stored in the 'attachments/' folder in R2, so include that path
     const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
-    return `${IMAGE_CDN_BASE_URL}/${cleanPath}`;
+    return `${IMAGE_CDN_BASE_URL}/attachments/${cleanPath}`;
   }
   
   // Fallback to local path for development
