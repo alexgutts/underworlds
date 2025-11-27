@@ -12,10 +12,13 @@ const Features: React.FC = () => {
       {/* Feature Block 1 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
         <div className="order-2 lg:order-1 relative h-[500px] lg:h-auto overflow-hidden">
+           {/* External image from Unsplash CDN - already optimized */}
            <img 
              src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&q=80&w=1200" 
              alt="Natural Stone Texture" 
              className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s]"
+             loading="lazy"
+             decoding="async"
            />
         </div>
         <div className="order-1 lg:order-2 flex flex-col justify-center p-12 lg:p-24 bg-[#EBE7DE]">
@@ -42,10 +45,13 @@ const Features: React.FC = () => {
            </p>
         </div>
         <div className="relative h-[500px] lg:h-auto overflow-hidden">
+           {/* External image from Pexels CDN - already optimized */}
            <img 
              src="https://images.pexels.com/photos/6801917/pexels-photo-6801917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
              alt="Woman sitting on wooden floor reading" 
              className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s] brightness-90"
+             loading="lazy"
+             decoding="async"
            />
         </div>
       </div>

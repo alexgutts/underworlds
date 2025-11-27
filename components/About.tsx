@@ -17,7 +17,7 @@
  */
 
 import React from 'react';
-import { getImageUrl, IMAGE_FILES } from '../config/images';
+import { getImageUrl, IMAGE_FILES, IMAGE_PRESETS } from '../config/images';
 
 const About: React.FC = () => {
   return (
@@ -46,10 +46,13 @@ const About: React.FC = () => {
           </p>
           
           {/* Featured underwater image */}
+          {/* Optimized about page image: 800px width, quality 80, auto format */}
           <img 
-            src={getImageUrl(IMAGE_FILES.SAASILMONICA3)} 
+            src={getImageUrl(IMAGE_FILES.SAASILMONICA3, IMAGE_PRESETS.about)} 
             alt="Freedivers ascending toward light" 
             className="w-full h-[500px] object-cover mt-12 shadow-2xl"
+            loading="lazy"
+            decoding="async"
           />
           <p className="text-sm font-medium uppercase tracking-widest text-[#0891B2] mt-4">
           Cenote in Yucatan, México
@@ -61,10 +64,13 @@ const About: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
         {/* Image on left */}
         <div className="order-2 lg:order-1 relative h-[500px] lg:h-auto overflow-hidden group">
+           {/* Optimized about page image with lazy loading */}
            <img 
-             src={getImageUrl(IMAGE_FILES.DSC09894)} 
+             src={getImageUrl(IMAGE_FILES.DSC09894, IMAGE_PRESETS.about)} 
              alt="Lone diver in the abyss with bioluminescent plankton" 
              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
+             loading="lazy"
+             decoding="async"
            />
         </div>
         
@@ -95,10 +101,13 @@ const About: React.FC = () => {
         
         {/* Image on right */}
         <div className="relative h-[500px] lg:h-auto overflow-hidden group">
+           {/* Optimized about page image with lazy loading */}
            <img 
-             src={getImageUrl(IMAGE_FILES.IMG_1823)} 
+             src={getImageUrl(IMAGE_FILES.IMG_1823, IMAGE_PRESETS.about)} 
              alt="Cathedral-like light rays in underwater cave" 
              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
+             loading="lazy"
+             decoding="async"
            />
         </div>
       </div>

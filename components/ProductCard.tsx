@@ -18,6 +18,7 @@
 
 import React from 'react';
 import { Product } from '../types';
+import { getImageUrl, IMAGE_PRESETS } from '../config/images';
 
 interface ProductCardProps {
   product: Product;
@@ -29,10 +30,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
     <div className="group flex flex-col gap-4 cursor-pointer" onClick={() => onClick(product)}>
       {/* Photography Image Container - maximized for portfolio view */}
       <div className="relative w-full aspect-[4/5] overflow-hidden bg-sky-900 shadow-xl">
+        {/* Optimized image: 600px width, quality 80, auto format (WebP/AVIF) for grid display */}
         <img 
           src={product.imageUrl} 
           alt={product.name} 
           className="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:brightness-110"
+          loading="lazy"
+          decoding="async"
         />
         
         {/* Hover Overlay with Simple Call-to-Action */}

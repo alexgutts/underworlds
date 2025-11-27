@@ -19,7 +19,7 @@
  */
 
 import React from 'react';
-import { getImageUrl, IMAGE_FILES } from '../config/images';
+import { getImageUrl, IMAGE_FILES, IMAGE_PRESETS } from '../config/images';
 
 const Hero: React.FC = () => {
   // Handle smooth scrolling to different sections of the page
@@ -53,11 +53,15 @@ const Hero: React.FC = () => {
       {/* Hero Background - Stunning Underwater Photography */}
       <div className="absolute inset-0 w-full h-full">
         {/* Main hero image: Freediver silhouetted against light rays - positioned 3% left for better centering */}
+        {/* Using optimized preset for hero images: 1920px width, quality 85, auto format (WebP/AVIF) */}
         <img 
-            src={getImageUrl(IMAGE_FILES.DSC00670)} 
+            src={getImageUrl(IMAGE_FILES.DSC00670, IMAGE_PRESETS.hero)} 
             alt="Freediver descending into deep blue water with dramatic light rays" 
             className="w-full h-full object-cover animate-[subtleZoom_20s_ease-in-out_infinite_alternate]"
             style={{ objectPosition: '47% center' }}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
         />
         {/* Dark gradient overlay to ensure text remains readable */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0C4A6E]/60 via-[#0C4A6E]/40 to-[#0A2540]/80"></div>

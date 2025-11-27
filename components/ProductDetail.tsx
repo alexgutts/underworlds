@@ -6,6 +6,7 @@
 
 import React, { useState } from 'react';
 import { Product } from '../types';
+import { getImageUrl, IMAGE_PRESETS } from '../config/images';
 
 interface ProductDetailProps {
   product: Product;
@@ -40,10 +41,13 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack, onAddToC
           {/* Left: Main Image Only */}
           <div className="flex flex-col gap-4">
             <div className="w-full aspect-[4/5] bg-[#EBE7DE] overflow-hidden">
+              {/* Optimized image: 1200px width, quality 85, auto format for detail view */}
               <img 
                 src={product.imageUrl} 
                 alt={product.name} 
                 className="w-full h-full object-cover animate-fade-in-up"
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>

@@ -17,10 +17,13 @@ const JournalDetail: React.FC<JournalDetailProps> = ({ article, onBack }) => {
     <div className="min-h-screen bg-[#F5F2EB] animate-fade-in-up">
        {/* Hero Image for Article - Full bleed to top so navbar sits on it */}
        <div className="w-full h-[50vh] md:h-[60vh] relative overflow-hidden">
+          {/* Journal header image: optimized for hero display */}
           <img 
              src={article.image} 
              alt={article.title} 
              className="w-full h-full object-cover"
+             loading="eager"
+             decoding="async"
           />
           <div className="absolute inset-0 bg-black/20"></div>
        </div>
